@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import os
 
 TOKEN="NzM1Nzc0MDM0NjU4MTk3NTY1.XxlI9w.Q1PbQUCGGehdi3SXYKotnzULtYE"
 PREFIX="#"
@@ -57,4 +58,6 @@ async def help(ctx):
     await ctx.send(embed=emb)
 
 
-client.run(TOKEN)
+token=os.environ.get("TOKEN")
+client.run(str(token))
+
