@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands
 import os
 
-TOKEN="NzM1Nzc0MDM0NjU4MTk3NTY1.XxlI9w.JwFyEqLJENi6nYe5WzHk6YiadL0"
 PREFIX="#"
 client=commands.Bot(command_prefix="#")
 client.remove_command("help")
