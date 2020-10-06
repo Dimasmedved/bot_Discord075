@@ -7,6 +7,11 @@ client=commands.Bot(command_prefix="#")
 client.remove_command("help")
 
 #команды
+@client.command(pass_context=True)
+async def sen(ctx):
+    await ctx.author.send("Привет я бот")
+
+
 @client.event
 async def on_member_join(member):
     channel=client.get_channel(735049701874860115)
