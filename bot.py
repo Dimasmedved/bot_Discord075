@@ -8,8 +8,8 @@ client.remove_command("help")
 
 #команды
 @client.command(pass_context=True)
-async def sen(ctx):
-    await ctx.author.send("Привет я бот")
+async def test(ctx):
+    await ctx.author.send("Привет вот держи ссылочку:"+"\n"+"https://yadi.sk/d/LPO86kuZZwU-Tg")
 
 
 @client.event
