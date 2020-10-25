@@ -9,7 +9,7 @@ client.remove_command("help")
 #команды
 @client.command(pass_context=True)
 async def test(ctx):
-    await ctx.author.send("Привет вот держи ссылочку:"+"\n"+"https://yadi.sk/d/LPO86kuZZwU-Tg")
+    await ctx.author.send("Привет вот держи ссылочку:"+"\n"+"https://yadi.sk/d/uoPHL2wck4Uc7g")
 
 
 @client.event
