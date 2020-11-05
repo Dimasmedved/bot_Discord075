@@ -7,9 +7,12 @@ client=commands.Bot(command_prefix="#")
 client.remove_command("help")
 
 #команды
-@client.command(pass_context=True)
-async def test(ctx):
-    await ctx.author.send("Привет вот держи ссылочку:"+"\n"+"https://yadi.sk/d/uoPHL2wck4Uc7g")
+@client.command()
+async def бета(ctx,member: discord.Member,amout=1):
+        await ctx.channel.purge(limit=amout)
+        await ctx.author.send("Привет теперь ты попал в конкурс" + "\n" + "держи ссылку на саму игру: " + "https://yadi.sk/d/uoPHL2wck4Uc7g" + "\n" + "и удачи тебе")
+        await member.add_roles(member.guild.get_role(773474507796774912))
+
 
 
 @client.event
