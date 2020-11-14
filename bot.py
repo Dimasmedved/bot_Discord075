@@ -10,9 +10,15 @@ client.remove_command("help")
 @client.command()
 async def бета(ctx,member: discord.Member,amout=1):
         await ctx.channel.purge(limit=amout)
-        await ctx.author.send("Привет теперь ты попал в конкурс" + "\n" + "держи ссылку на саму игру: " + "https://yadi.sk/d/uoPHL2wck4Uc7g" + "\n" + "и удачи тебе")
+        await ctx.author.send("Привет теперь ты попал в конкурс" + "\n" + "держи ссылку на саму игру: " + "https://yadi.sk/d/H8IucQfoV8BaKQ" + "\n" + "и удачи тебе")
         await member.add_roles(member.guild.get_role(773474507796774912))
-
+        
+@client.command()
+@commands.has_permissions(administrator=True)
+async def new(ctx,amout=1):
+    ctx.channel.purge(limit=amout)
+    ctx.send("!!!НОВАЯ ВЕРИЯ ИГРЫ!!!"+"\n"+"https://yadi.sk/d/H8IucQfoV8BaKQ"+"\n"+"Что нового:"+"\n"+"-добавлены уровни 30-45"+"\n"+
+             "-в меню настройки добавлена переключение управления"+"\n"+"-Добавлены разные ловушки в новых уровнях"+"\n"+"Удачи в поисках багов!!!")
 
 
 @client.event
